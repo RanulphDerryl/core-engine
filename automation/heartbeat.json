@@ -1,0 +1,38 @@
+{
+  "serviceName": "core-engine",
+  "status": "healthy",
+  "timestamp": "2024-10-27T10:00:00Z",
+  "version": "1.2.3",
+  "dependencies": {
+    "database": {
+      "status": "healthy",
+      "responseTimeMs": 15
+    },
+    "messageQueue": {
+      "status": "healthy",
+      "queueDepth": 50
+    },
+    "externalAPI": {
+      "status": "degraded",
+      "errors": ["timeout exceeded"]
+    }
+  },
+  "metrics": {
+    "cpuUsage": 0.65,
+    "memoryUsageBytes": 1234567890,
+    "activeRequests": 120
+  },
+  "environment": "production",
+  "instanceId": "core-engine-prod-1a2b3c",
+  "buildInfo": {
+    "gitCommitHash": "a1b2c3d4e5f67890",
+    "buildTimestamp": "2024-10-26T20:00:00Z"
+  },
+  "alerts": [
+    {
+      "severity": "warning",
+      "message": "External API experiencing timeouts.",
+      "timestamp": "2024-10-27T09:55:00Z"
+    }
+  ]
+}
